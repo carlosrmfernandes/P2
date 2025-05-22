@@ -57,8 +57,17 @@ Após o cadastro, o usuário deverá ser redirecionado novamente para a tela de 
 
 ## 4. Atualização de Endereço
 
+
 Na listagem, cada linha da tabela deverá conter um botão **"Atualizar"**, que abrirá uma tela ou modal para edição dos dados. Para atualizar, utilize:
 
+1 - Busca o endereço pelo id, e apresenta os dados nos inputs
+
+```
+curl --location 'https://go-wash-api.onrender.com/api/auth/address/{id}' \
+-H "Authorization: Bearer <JWT_TOKEN>" \
+--data ''
+```
+2 - Ao clicar no botão **"Atualizar"** dever fazer a atualização 
 ```
 curl -X POST https://go-wash-api.onrender.com/api/auth/address/{id} \
 -H "Content-Type: application/json" \
